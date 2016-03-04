@@ -1,0 +1,26 @@
+{
+  "name": "spin",
+  "version": "0.0.1",
+  "description": "YouTube Music Player",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gangoffork/spin.git"
+  },
+  "keywords": [
+    "youtube",
+    "music",
+    "player",
+    "electron",
+    "material"
+  ],
+  "author": "Gangoffork",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gangoffork/spin/issues"
+  },
+  "homepage": "https://github.com/gangoffork/spin#readme"
+}
