@@ -1,26 +1,39 @@
 {
   "name": "spin",
-  "version": "0.0.1",
+  "productName": "Spin",
+  "version": "0.0.2",
   "description": "YouTube Music Player",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gangoffork/spin.git"
-  },
-  "keywords": [
-    "youtube",
-    "music",
-    "player",
-    "electron",
-    "material"
-  ],
-  "author": "Gangoffork",
+  "keywords": ["youtube", "music", "player", "electron", "material"],
+  "homepage": "https://github.com/gangoffork/spin#readme",
+  "repository": "gangoffork/spin",
   "license": "MIT",
+  "author": {
+    "name": "GangOfFork",
+    "url": "https://gangoffork.github.io"
+  },
   "bugs": {
     "url": "https://github.com/gangoffork/spin/issues"
   },
-  "homepage": "https://github.com/gangoffork/spin#readme"
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --app-version=$npm_package_version --prune --asar --overwrite --all"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "dependencies": {
+    "electron-debug": "^0.6.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^7.0.0",
+    "electron-prebuilt": "^0.37.5",
+    "xo": "^0.14.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [ "node", "browser" ]
+  }
 }
