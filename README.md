@@ -4,7 +4,7 @@ YouTube Music Player
 
 ## To do
 
-- [ ] Add Electron scaffolding
+- [x] Add Electron scaffolding
 - [ ] Add Material design lite scaffolding
 - [ ] Create UI based on Material design lite
   - [ ] Add playlist by URL
