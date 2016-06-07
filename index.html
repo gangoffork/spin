@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="appSpin">
 	<head>
 		<meta charset="utf-8">
 		<title>Spin</title>
 		<!-- Default css -->
 		<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 		<!-- App custom css -->
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" ng-controller="appSpinController">
 			<header>
-				<h1>Spin</h1>
+				<h1>{{appName}}</h1>
 			</header>
 			<section class="main"></section>
-			<footer>
-				Made by gangoffork.
-			</footer>
+			<spin-footer>
 		</div>
 		<!-- Default js -->
+		<script src="node_modules/angular/angular.js"></script>
 		<script src="semantic/dist/semantic.min.js"></script>
+		<script src="js/appSpin.js"></script>
 	</body>
 </html>
