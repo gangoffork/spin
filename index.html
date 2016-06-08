@@ -9,15 +9,15 @@
 		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
-		<div class="container" ng-controller="appSpinController">
-			<header>
-				<h1>{{appName}}</h1>
-			</header>
-			<section class="main"></section>
-			<spin-footer>
+		<div class="ui center aligned container" ng-controller="appSpinController">
+			 <spin-menu></spin-menu>
+			 <div ng-view></div>
+			 <spin-footer></spin-footer>
 		</div>
+
 		<!-- Default js -->
 		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-route/angular-route.js"></script>
 		<script src="semantic/dist/semantic.min.js"></script>
 		<script src="js/appSpin.js"></script>
 	</body>

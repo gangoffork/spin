@@ -9,14 +9,7 @@ body {
 }
 
 header {
-	position: absolute;
-	width: 500px;
-	height: 250px;
-	top: 50%;
-	left: 50%;
-	margin-top: -125px;
-	margin-left: -250px;
-	text-align: center;
+	margin-top: 10px;
 }
 
 header h1 {
@@ -27,11 +20,11 @@ header h1 {
 }
 
 footer {
-	position: absolute;
-	text-align: center;
-	width: 500px;
-	height: 100px;
-	margin-left: -250px;
-	top: 70%;
-	left: 50%;
+	position: fixed;
+	bottom: 10px;
+	right: 5px;
+}
+
+.content {
+	margin-top: 20px;
 }
