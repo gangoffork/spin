@@ -35,9 +35,8 @@ angular.module('appSpin', ['ngRoute'])
   }])
   .controller('playerController', ['$scope','$routeParams', function($routeParams, $scope) {
     // not yet implemented.
-    $scope.queue = [{name: "first", uri: "first.html"}, {name: "second", uri: "second.html"}];
+    this.queue = [{name: "first", uri: "first.html"}, {name: "second", uri: "second.html"}];
 
-    console.log("player: " + $scope.queue);
   }])
   .controller('loginController', ['$routeParams', function($routeParams) {
     // not yet implemented.

@@ -1,4 +1,29 @@
-<div class="content">
-  <h2>player</h2>
-  {{queue}}
+<div class="ui center aligned content">
+  <div class="ui icon buttons">
+    <button class="ui button">
+      play
+      <i class="play icon"></i>
+    </button>
+    <button class="ui button">
+      pause
+      <i class="pause icon"></i>
+    </button>
+    <button class="ui button">
+      shuffle
+      <i class="shuffle icon"></i>
+    </button>
+  </div>
+  <h2>Play List</h2>
+  <table class="ui very basic collapsing celled table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Url</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in player.queue">
+      <td>{{item.name}}</td> <td>{{item.uri}}</td></tr>
+    </tbody>
+  </table>
 </div>
