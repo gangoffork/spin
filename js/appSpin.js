@@ -35,7 +35,27 @@ angular.module('appSpin', ['ngRoute'])
   }])
   .controller('playerController', ['$scope','$routeParams', function($routeParams, $scope) {
     // not yet implemented.
-    this.queue = [{name: "first", uri: "first.html"}, {name: "second", uri: "second.html"}];
+    this.queue = [];
+    this.currentMusic = {};
+    this.musicName = "";
+    this.musicUri = "";
+
+    this.add = function() {
+      this.currentMusic = {name: this.musicName, uri: this.musicUri};
+      this.queue.push(this.currentMusic);
+    };
+
+    this.remove = function(item) {
+      var index;
+      var numToRemove = 1;
+      index = this.queue.indexOf(item);
+      this.queue.splice(index, numToRemove);
+    };
+
+    //not yet implemented
+    this.play = function() {};
+    this.pause = function() {};
+    this.stop = function() {};
 
   }])
   .controller('loginController', ['$routeParams', function($routeParams) {

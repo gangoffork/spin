@@ -1,4 +1,17 @@
-<div class="ui center aligned content">
+<div class="ui container center aligned">
+
+    <div class="ui fluid card">
+      <div class="content">
+        <a class="header">{{player.currentMusic.name}}</a>
+        <div class="meta">
+          <span class="date">{{player.currentMusic.uri}}</span>
+        </div>
+        <div class="description">
+          
+        </div>
+      </div>
+    </div>
+
   <div class="ui icon buttons">
     <button class="ui button">
       play
@@ -13,7 +26,19 @@
       <i class="shuffle icon"></i>
     </button>
   </div>
+
+  <form class="ui form" ng-submit="player.add()">
+    <div class="field flex">
+      <input type="text" ng-model="player.musicName" placeholder="Name of music">
+    </div>
+    <div class="field flex">
+      <input type="text" ng-model="player.musicUri" placeholder="Url of music">
+    </div>
+    <button id="player.add" class="ui button" type="submit">add</button>
+  </form>
+
   <h2>Play List</h2>
+
   <table class="ui very basic collapsing celled table">
     <thead>
       <tr>
@@ -26,4 +51,5 @@
       <td>{{item.name}}</td> <td>{{item.uri}}</td></tr>
     </tbody>
   </table>
+
 </div>
