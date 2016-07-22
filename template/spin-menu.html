@@ -1,6 +1,7 @@
-<div class="ui menu" >
-    <div class="header item">
-      <a href="#home"><h1>{{appName}}</h1></a>
-    </div>
-    <a class="item" ng-repeat="item in menu" ng-href="{{item.uri}}">{{item.name}}</a>
-</div>
+<md-content class="md-padding">
+  <!-- <a href="#home"><h1>{{appName}}</h1></a> -->
+  <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+  <!-- <a class="" ng-repeat="item in menu" ng-href="{{item.uri}}">{{item.name}}</a> -->
+  <md-nav-item ng-repeat="item in menu" md-nav-sref="{{item.uri}}" name="{{item.name}}">{{item.name}}</md-nav-item>
+  </md-nav-bar>
+</md-content>

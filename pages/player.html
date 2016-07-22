@@ -1,13 +1,13 @@
-<div class="ui container center aligned">
+<div class="">
 
-    <div class="ui fluid card">
+    <div class="">
       <div class="content">
         <a class="header">{{player.currentMusic.name}}</a>
         <div class="meta">
           <span class="date">{{player.currentMusic.uri}}</span>
 <!-- //onyb8tCN-RQ -->
         </div>
-        <div class="description">
+        <div class="">
           <iframe id="ytplayer" type="text/html" width="480" height="270"
             ng-src="{{player.currentMusic.uri}}"
             frameborder="0" allowfullscreen></iframe>
@@ -15,26 +15,26 @@
       </div>
     </div>
 
-  <div class="ui icon buttons">
-    <button class="ui button" ng-click="player.play()">
+  <div class="">
+    <button class="" ng-click="player.play()">
       play
-      <i class="play icon"></i>
+      <i class=""></i>
     </button>
-    <button class="ui button">
+    <button class="">
       pause
-      <i class="pause icon"></i>
+      <i class=""></i>
     </button>
-    <button class="ui button">
+    <button class="">
       shuffle
-      <i class="shuffle icon"></i>
+      <i class=""></i>
     </button>
   </div>
 
-  <form class="ui form" ng-submit="player.add()">
-    <div class="field flex">
+  <form class="" ng-submit="player.add()">
+    <div class="">
       <input type="text" ng-model="player.musicName" placeholder="Name of music">
     </div>
-    <div class="field flex">
+    <div class="">
       <input type="text" ng-model="player.musicUri" placeholder="Url of music">
     </div>
     <button id="player.add" class="ui button" type="submit">add</button>
@@ -42,7 +42,7 @@
 
   <h2>Play List</h2>
 
-  <table class="ui very basic collapsing celled table">
+  <table class="">
     <thead>
       <tr>
         <th>Name</th>

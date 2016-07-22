@@ -1,5 +1,5 @@
 'use strict';
-angular.module('appSpin', ['ngRoute'])
+angular.module('appSpin', ['ngRoute', 'ngMaterial'])
   .config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
       $routeProvider
@@ -32,6 +32,7 @@ angular.module('appSpin', ['ngRoute'])
       $scope.appName = "Spin";
       $scope.spinFooter = "Made by gangoffork.";
       $scope.menu = [{name: "Player", uri: "#player"},{name: "Login", uri: "#login"}];
+      $scope.currentNavItem = 'home';
   }])
   .controller('playerController', ['$scope','$routeParams', function($routeParams, $ngSrc) {
     // not yet implemented.

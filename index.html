@@ -2,14 +2,14 @@
 <html ng-app="appSpin">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 		<title>Spin</title>
-		<!-- Default css -->
-		<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+		<link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
 		<!-- App custom css -->
 		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
-		<div class="ui center aligned container" ng-controller="appSpinController">
+		<div class="" ng-controller="appSpinController">
 			 <spin-menu></spin-menu>
 			 <div ng-view></div>
 			 <spin-footer></spin-footer>
@@ -18,7 +18,9 @@
 		<!-- Default js -->
 		<script src="node_modules/angular/angular.js"></script>
 		<script src="node_modules/angular-route/angular-route.js"></script>
-		<script src="semantic/dist/semantic.min.js"></script>
+		<script src="node_modules/angular-aria/angular-aria.js"></script>
+		<script src="node_modules/angular-animate/angular-animate.js"></script>
+		<script src="node_modules/angular-material/angular-material.js"></script>
 		<script src="js/appSpin.js"></script>
 	</body>
 </html>
