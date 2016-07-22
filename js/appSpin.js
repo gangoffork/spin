@@ -33,7 +33,7 @@ angular.module('appSpin', ['ngRoute'])
       $scope.spinFooter = "Made by gangoffork.";
       $scope.menu = [{name: "Player", uri: "#player"},{name: "Login", uri: "#login"}];
   }])
-  .controller('playerController', ['$scope','$routeParams', function($routeParams, $scope) {
+  .controller('playerController', ['$scope','$routeParams', function($routeParams, $ngSrc) {
     // not yet implemented.
     this.queue = [];
     this.currentMusic = {};
@@ -53,7 +53,9 @@ angular.module('appSpin', ['ngRoute'])
     };
 
     //not yet implemented
-    this.play = function() {};
+    this.play = function() {
+      console.log("Play " + " " + this.currentMusic.uri);
+    };
     this.pause = function() {};
     this.stop = function() {};
 

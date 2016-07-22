@@ -5,15 +5,18 @@
         <a class="header">{{player.currentMusic.name}}</a>
         <div class="meta">
           <span class="date">{{player.currentMusic.uri}}</span>
+<!-- //onyb8tCN-RQ -->
         </div>
         <div class="description">
-          
+          <iframe id="ytplayer" type="text/html" width="480" height="270"
+            ng-src="{{player.currentMusic.uri}}"
+            frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
 
   <div class="ui icon buttons">
-    <button class="ui button">
+    <button class="ui button" ng-click="player.play()">
       play
       <i class="play icon"></i>
     </button>
