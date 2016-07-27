@@ -1,58 +1,44 @@
-<div class="">
-
-    <div class="">
-      <div class="content">
-        <a class="header">{{player.currentMusic.name}}</a>
-        <div class="meta">
-          <span class="date">{{player.currentMusic.uri}}</span>
-<!-- //onyb8tCN-RQ -->
-        </div>
-        <div class="">
-          <iframe id="ytplayer" type="text/html" width="480" height="270"
-            ng-src="{{player.currentMusic.uri}}"
-            frameborder="0" allowfullscreen></iframe>
-        </div>
+<div layout="column" layout-align="center center">
+  <div layout="column" layout-align="center center">
+      <a class="header">{{player.currentMusic.name}}</a>
+      <span class="date">{{player.currentMusic.uri}}</span>
+      <!-- //onyb8tCN-RQ -->
+      <div>
+      <iframe id="ytplayer" type="text/html" width="480" height="270"
+          ng-src="{{player.currentMusic.uri}}"
+          frameborder="0" allowfullscreen></iframe>
       </div>
+      <div>
+      <md-button md-no-ink class="md-primary" ng-click="player.play()">play<i></i></md-button>
+      <md-button>pause<i></i></md-button>
+      <md-button>shuffle<i></i></md-buttonlll>
     </div>
-
-  <div class="">
-    <button class="" ng-click="player.play()">
-      play
-      <i class=""></i>
-    </button>
-    <button class="">
-      pause
-      <i class=""></i>
-    </button>
-    <button class="">
-      shuffle
-      <i class=""></i>
-    </button>
   </div>
 
-  <form class="" ng-submit="player.add()">
-    <div class="">
+    <form layout="column" layout-align="center end" ng-submit="player.add()">
+      <md-input-container>
       <input type="text" ng-model="player.musicName" placeholder="Name of music">
-    </div>
-    <div class="">
+      </md-input-container>
+      <md-input-container>
       <input type="text" ng-model="player.musicUri" placeholder="Url of music">
-    </div>
-    <button id="player.add" class="ui button" type="submit">add</button>
-  </form>
+      </md-input-container>
+      <md-button md-no-ink class="md-primary" id="player.add" class="ui button" type="submit">add</md-button>
+    </form>
 
-  <h2>Play List</h2>
-
-  <table class="">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Url</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="item in player.queue">
-      <td>{{item.name}}</td> <td>{{item.uri}}</td></tr>
-    </tbody>
-  </table>
+  <div>
+    <h2>Play List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Url</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in player.queue">
+        <td>{{item.name}}</td> <td>{{item.uri}}</td></tr>
+      </tbody>
+    </table>
+  </div>
 
 </div>

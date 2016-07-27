@@ -8,11 +8,8 @@ body {
 	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-header {
+.header {
 	margin-top: 10px;
-}
-
-header h1 {
 	font-size: 60px;
 	font-weight: 100;
 	margin: 0;

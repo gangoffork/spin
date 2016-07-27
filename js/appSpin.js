@@ -31,7 +31,7 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial'])
 
       $scope.appName = "Spin";
       $scope.spinFooter = "Made by gangoffork.";
-      $scope.menu = [{name: "Player", uri: "#player"},{name: "Login", uri: "#login"}];
+      $scope.menu = [{name: "Spin", uri: "#home"},{name: "Player", uri: "#player"}];
       $scope.currentNavItem = 'home';
   }])
   .controller('playerController', ['$scope','$routeParams', function($routeParams, $ngSrc) {
