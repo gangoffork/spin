@@ -2,15 +2,16 @@
   <div layout="column" layout-align="center center">
       <a class="header">{{player.currentMusic.name}}</a>
       <span class="date">{{player.currentMusic.uri}}</span>
-      <!-- //onyb8tCN-RQ -->
+      <!-- //onyb8tCN-RQ src="https://www.youtube.com/embed/onyb8tCN-RQ?autoplay=1&cc_load_policy=1"-->
       <div>
-      <iframe id="ytplayer" type="text/html" width="480" height="270"
-          ng-src="{{player.currentMusic.uri}}"
-          frameborder="0" allowfullscreen></iframe>
+      <!-- <iframe id="ytplayer" type="text/html" width="480" height="270"
+          src="https://www.youtube.com/embed/onyb8tCN-RQ?autoplay=1&cc_load_policy=1"
+          frameborder="0" allowfullscreen></iframe> -->
+          <youtube-video video-id="currentVideo" player = "currentPlayer"></youtube-video>
       </div>
       <div>
-      <md-button md-no-ink class="md-primary" ng-click="player.play()">play<i></i></md-button>
-      <md-button>pause<i></i></md-button>
+      <md-button md-no-ink class="md-primary" ng-click="currentPlayer.playVideo()">Play<i></i></md-button>
+      <md-button ng-click="currentPlayer.playStop()">Stop<i></i></md-button>
       <md-button>shuffle<i></i></md-buttonlll>
     </div>
   </div>

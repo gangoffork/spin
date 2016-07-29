@@ -1,5 +1,5 @@
 'use strict';
-angular.module('appSpin', ['ngRoute', 'ngMaterial'])
+angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
   .config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
       $routeProvider
@@ -34,16 +34,19 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial'])
       $scope.menu = [{name: "Spin", uri: "#home"},{name: "Player", uri: "#player"}];
       $scope.currentNavItem = 'home';
   }])
-  .controller('playerController', ['$scope','$routeParams', function($routeParams, $ngSrc) {
+  .controller('playerController', ['$scope','$routeParams', function($scope, $routeParams, $ngSrc) {
     // not yet implemented.
     this.queue = [];
     this.currentMusic = {};
     this.musicName = "";
     this.musicUri = "";
+    // this.currentVideo = "onyb8tCN-RQ";
+    $scope.currentVideo  = "onyb8tCN-RQ";
 
     this.add = function() {
       this.currentMusic = {name: this.musicName, uri: this.musicUri};
       this.queue.push(this.currentMusic);
+      $scope.currentVide = this.currentMusic.musicUri;
     };
 
     this.remove = function(item) {
@@ -53,12 +56,11 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial'])
       this.queue.splice(index, numToRemove);
     };
 
-    //not yet implemented
-    this.play = function() {
-      console.log("Play " + " " + this.currentMusic.uri);
-    };
-    this.pause = function() {};
-    this.stop = function() {};
+    $scope.$on('youtube.player.ended', function ($event, player) {
+      if (player === $scope.looper.player) {
+          player.playVideo();
+      }
+    });
 
   }])
   .controller('loginController', ['$routeParams', function($routeParams) {
