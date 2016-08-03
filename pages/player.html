@@ -5,12 +5,11 @@
       <!-- <iframe id="ytplayer" type="text/html" width="480" height="270"
           src="https://www.youtube.com/embed/onyb8tCN-RQ?autoplay=1&cc_load_policy=1"
           frameborder="0" allowfullscreen></iframe> -->
-          <youtube-video video-id="currentVideo" player = "currentPlayer"></youtube-video>
+          <youtube-video video-id="currentVideo" player = "currentPlayer" player-vars="playerVars"></youtube-video>
       </div>
       <div>
       <md-button md-no-ink class="md-primary" ng-click="currentPlayer.playVideo()">Play<i></i></md-button>
-      <md-button ng-click="currentPlayer.pauseVideo()">Stop<i></i></md-button>
-      <md-button>shuffle<i></i></md-buttonlll>
+      <md-button ng-click="currentPlayer.pauseVideo()">Pause<i></i></md-button>
     </div>
   </div>
 
