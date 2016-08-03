@@ -1,7 +1,5 @@
 <div layout="column" layout-align="center center">
   <div layout="column" layout-align="center center">
-      <a class="header">{{player.currentMusic.name}}</a>
-      <span class="date">{{player.currentMusic.uri}}</span>
       <!-- //onyb8tCN-RQ src="https://www.youtube.com/embed/onyb8tCN-RQ?autoplay=1&cc_load_policy=1"-->
       <div>
       <!-- <iframe id="ytplayer" type="text/html" width="480" height="270"
@@ -11,7 +9,7 @@
       </div>
       <div>
       <md-button md-no-ink class="md-primary" ng-click="currentPlayer.playVideo()">Play<i></i></md-button>
-      <md-button ng-click="currentPlayer.playStop()">Stop<i></i></md-button>
+      <md-button ng-click="currentPlayer.pauseVideo()">Stop<i></i></md-button>
       <md-button>shuffle<i></i></md-buttonlll>
     </div>
   </div>

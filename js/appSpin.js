@@ -23,6 +23,12 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
         });
       //$locationProvider.html5Mode(true);
     }])
+  .config(function($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+    'self',
+    'https://www.youtube.com/**'
+  ]);
+  })
   .controller('appSpinController', ['$scope', '$http', '$route', '$routeParams', '$location',
     function($scope, $http, $route, $routeParams, $location) {
       this.$route = $route;
@@ -41,12 +47,17 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
     this.musicName = "";
     this.musicUri = "";
     // this.currentVideo = "onyb8tCN-RQ";
-    $scope.currentVideo  = "onyb8tCN-RQ";
+    // Zq8hiZPqj_U
+    $scope.currentVideo  = "";
+
+    $scope.playerVars = {
+        autoplay: 1
+    };
 
     this.add = function() {
       this.currentMusic = {name: this.musicName, uri: this.musicUri};
       this.queue.push(this.currentMusic);
-      $scope.currentVide = this.currentMusic.musicUri;
+      $scope.currentVideo = this.currentMusic.uri;
     };
 
     this.remove = function(item) {
