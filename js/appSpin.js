@@ -1,7 +1,7 @@
-'use strict';
 angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
   .config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
+      'use strict';
       $routeProvider
         .when('/home', {
           templateUrl: 'pages/home.html',
@@ -12,11 +12,6 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
           templateUrl: 'pages/player.html',
           controller: 'playerController',
           controllerAs: 'player'
-        })
-        .when('/login', {
-          templateUrl: 'pages/login.html',
-          controller: 'loginController',
-          controllerAs: 'login'
         })
         .otherwise({
           redirectTo: '/home'
@@ -41,13 +36,9 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
       $scope.currentNavItem = 'home';
   }])
   .controller('playerController', ['$scope','$routeParams', function($scope, $routeParams, $ngSrc) {
-    // not yet implemented.
     this.queue = [];
     this.currentMusic = {};
     this.musicName = "";
-    this.musicUri = "";
-    // this.currentVideo = "onyb8tCN-RQ";
-    // Zq8hiZPqj_U
     $scope.currentVideo  = "";
 
     $scope.playerVars = {
@@ -67,15 +58,16 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
       this.queue.splice(index, numToRemove);
     };
 
+    this.play = function(item) {
+      $scope.currentVideo = item.uri;
+    };
+
     $scope.$on('youtube.player.ended', function ($event, player) {
       if (player === $scope.looper.player) {
           player.playVideo();
       }
     });
 
-  }])
-  .controller('loginController', ['$routeParams', function($routeParams) {
-    // not yet implemented.
   }])
   .controller('homeController', ['$routeParams', function() {
     // not yet implemented.

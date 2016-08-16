@@ -34,7 +34,10 @@
       </thead>
       <tbody>
         <tr ng-repeat="item in player.queue">
-        <td>{{item.name}}</td> <td>{{item.uri}}</td></tr>
+        <td>{{item.name}}</td> <td>{{item.uri}}</td>
+        <td><md-button md-no-ink class="md-primary" class="ui button" ng-click="player.play(item)">play</md-button></td>
+        <td><md-button md-no-ink class="md-primary" class="ui button" ng-click="player.remove(item)">remove</md-button></td>
+        </tr>
       </tbody>
     </table>
   </div>
