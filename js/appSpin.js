@@ -54,11 +54,9 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
       } else {
         return uri;
       }
-      return uri;
     };
 
     this.add = function() {
-
       this.currentMusic = {name: this.musicName, uri: this.musicUri};
       this.queue.push(this.currentMusic);
       $scope.currentVideo = verifyYoutubeUrl(this.currentMusic.uri);
