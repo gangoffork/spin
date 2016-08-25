@@ -45,10 +45,23 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
         autoplay: 1
     };
 
+    var verifyYoutubeUrl = function(uri) {
+      var error = -1;
+      var tag = "?v=";
+      var index = uri.indexOf(tag);
+      if (index !== error) {
+        return uri.slice(index+tag.length);
+      } else {
+        return uri;
+      }
+      return uri;
+    };
+
     this.add = function() {
+
       this.currentMusic = {name: this.musicName, uri: this.musicUri};
       this.queue.push(this.currentMusic);
-      $scope.currentVideo = this.currentMusic.uri;
+      $scope.currentVideo = verifyYoutubeUrl(this.currentMusic.uri);
     };
 
     this.remove = function(item) {
@@ -59,7 +72,7 @@ angular.module('appSpin', ['ngRoute', 'ngMaterial', 'youtube-embed'])
     };
 
     this.play = function(item) {
-      $scope.currentVideo = item.uri;
+      $scope.currentVideo = verifyYoutubeUrl(item.uri);
     };
 
     $scope.$on('youtube.player.ended', function ($event, player) {
