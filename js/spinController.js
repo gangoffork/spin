@@ -37,10 +37,8 @@ appSpin.controller('appSpinController', ['$scope', '$http', '$route', '$routePar
   };
 
   this.remove = function(item) {
-    var index;
     var numToRemove = 1;
-    index = this.queue.indexOf(item);
-    this.queue.splice(index, numToRemove);
+    this.queue.splice(this.queue.indexOf(item), numToRemove);
   };
 
   this.play = function(item) {
