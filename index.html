@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="appSpin">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 		<title>Spin</title>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+		<!-- App custom css -->
+		<link rel="stylesheet" href="css/index.css">
 	</head>
+
 	<body>
-		<div class="container">
-			<header>
-				<h1>Spin</h1>
-			</header>
-			<section class="main"></section>
-			<footer></footer>
+		<div ng-controller="appSpinController">
+			 <spin-menu></spin-menu>
+			 <div ng-view></div>
+			 <spin-footer></spin-footer>
 		</div>
+
+		<!-- Default js -->
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-route/angular-route.js"></script>
+		<script src="node_modules/angular-aria/angular-aria.js"></script>
+		<script src="node_modules/angular-animate/angular-animate.js"></script>
+		<script src="node_modules/angular-material/angular-material.js"></script>
+		<script src="https://www.youtube.com/iframe_api"></script>
+		<script src="node_modules/angular-youtube-embed/src/angular-youtube-embed.js"></script>
+		<!-- App custom js -->
+		<script src="js/appSpin.js"></script>
+		<script src="js/spinConfig.js"></script>
+		<script src="js/spinController.js"></script>
+
 	</body>
 </html>

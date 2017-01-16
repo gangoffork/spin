@@ -1,0 +1,9 @@
+<div layout="column" layout-align="center center">
+  <h1 class="content">{{fileName}}</h1>
+  <audio controls ng-src="{{filePath}}" type="audio/mpeg"> </audio>
+  <form layout="column" layout-align="center center">
+    <md-input-container>
+    <input type="file" multiple onchange="angular.element(this).scope().fileNameChanged(this)">
+    </md-input-container>
+  </form>
+</div>

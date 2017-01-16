@@ -1,0 +1,45 @@
+<div layout="column" layout-align="center center">
+  <div layout="column" layout-align="center center">
+      <!-- //onyb8tCN-RQ src="https://www.youtube.com/embed/onyb8tCN-RQ?autoplay=1&cc_load_policy=1"-->
+      <div>
+      <!-- <iframe id="ytplayer" type="text/html" width="480" height="270"
+          src="https://www.youtube.com/embed/onyb8tCN-RQ?autoplay=1&cc_load_policy=1"
+          frameborder="0" allowfullscreen></iframe> -->
+          <youtube-video video-id="currentVideo" player = "currentPlayer" player-vars="playerVars"></youtube-video>
+      </div>
+      <div>
+      <md-button md-no-ink class="md-primary" ng-click="currentPlayer.playVideo()">Play<i></i></md-button>
+      <md-button ng-click="currentPlayer.pauseVideo()">Pause<i></i></md-button>
+    </div>
+  </div>
+
+    <form layout="column" layout-align="center end" ng-submit="player.add()">
+      <md-input-container>
+      <input type="text" ng-model="player.musicName" placeholder="Name of music">
+      </md-input-container>
+      <md-input-container>
+      <input type="text" ng-model="player.musicUri" placeholder="Url of music">
+      </md-input-container>
+      <md-button md-no-ink class="md-primary" id="player.add" class="ui button" type="submit">add</md-button>
+    </form>
+
+  <div>
+    <h2>Play List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Url</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in player.queue">
+        <td>{{item.name}}</td> <td>{{item.uri}}</td>
+        <td><md-button md-no-ink class="md-primary" class="ui button" ng-click="player.play(item)">play</md-button></td>
+        <td><md-button md-no-ink class="md-primary" class="ui button" ng-click="player.remove(item)">remove</md-button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
