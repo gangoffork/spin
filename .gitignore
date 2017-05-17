@@ -25,6 +25,7 @@ build/Release
 
 # Dependency directory
 node_modules
+jspm_packages
 
 # Optional npm cache directory
 .npm
@@ -34,3 +35,16 @@ node_modules
 
 # Build files
 /dist
+
+.idea
+
+src/**/*.js
+!src/systemjs.config.extras.js
+!src/systemjs.config.js
+!src/systemjs-angular-loader.js
+*.js.map
+e2e/**/*.js
+e2e/**/*.js.map
+_test-output
+_temp
+
